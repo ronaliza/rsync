@@ -22,5 +22,17 @@ ssh-copy-id -i  /root/.ssh/id_rsa.pub  -p 10001 root@104.192.84.225
 ssh-copy-id -i  /root/.ssh/id_rsa.pub  -p 10201 root@115.144.238.162
 
 
+
+cd  /www/wwwroot/kavin.xmx8.tk
+rsync -rP -arvz -e 'ssh -p 10201' --progress \
+ root@115.144.238.162:/www/wwwroot/nick.xmx8.tk/ /www/wwwroot/kavin.xmx8.tk/
+ 
+ cd  /www/backup/database
+rsync -rP -arvz -e 'ssh -p 10201' --progress \
+ root@115.144.238.162:/www/backup/database/nick_xmx8_tk_20190416_125847.sql.gz /www/backup/database/
+ 
+ 
+
+
 ssh -p '10001' 'root@103.107.236.126'
 ```
