@@ -1,4 +1,4 @@
-
+```
 todo
 	
 ps aux|grep rsync|awk '{print $2}'|xargs kill -9
@@ -19,7 +19,8 @@ rsync -rP -arvz -e 'ssh -p 10001' --progress \
 
 
 ssh-copy-id -i  /root/.ssh/id_rsa.pub  -p 10001 root@104.192.84.225
-
+ssh-copy-id -i  /root/.ssh/id_rsa.pub  -p 10201 root@115.144.238.162
 
 
 ssh -p '10001' 'root@103.107.236.126'
+```
